@@ -5,6 +5,8 @@ namespace NextBox\Neos\FormCaptcha\Form\FormElements;
 use GuzzleHttp\Psr7\ServerRequest;
 use Neos\Error\Messages\Error;
 use Neos\Flow\Annotations as Flow;
+use Neos\Flow\I18n\Service;
+use Neos\Flow\I18n\Translator;
 use Neos\Flow\Mvc\ActionRequest;
 use Neos\Flow\Mvc\Routing\UriBuilder;
 use Neos\Flow\Session\SessionInterface;
@@ -30,6 +32,19 @@ class Captcha extends AbstractFormElement
      * @var UriBuilder
      */
     protected $uriBuilder;
+
+    /**
+     * @Flow\Inject
+     * @var Translator
+     */
+    protected $translatorService;
+
+    /**
+     * @Flow\Inject
+     * @var Service
+     */
+    protected $i18nService;
+
 
     /**
      * Initialize form element
@@ -82,8 +97,16 @@ class Captcha extends AbstractFormElement
             $phrase = $this->session->getData(CaptchaController::CAPTCHA_SESSION_NAME);
 
             if ($elementValue !== $phrase) {
+                $renderingOptions = $this->getRenderingOptions();
+                $translationPackage = $renderingOptions['translationPackage'];
+                $translationSource = $renderingOptions['translationSource'];
+                $translationId = $renderingOptions['translationId'] ?: 'forms.element.' . $this->getIdentifier() . '.error';
+                $locale = $this->i18nService->getConfiguration()->getCurrentLocale();
+
+                $translation = $this->translatorService->translateById($translationId, [], null, $locale, $translationSource, $translationPackage);
+
                 $processingRule = $this->getRootForm()->getProcessingRule($this->getIdentifier());
-                $processingRule->getProcessingMessages()->addError(new Error('The captcha is not equal to the image.', 1677000600));
+                $processingRule->getProcessingMessages()->addError(new Error($translation, 1677000600));
             }
         }
     }

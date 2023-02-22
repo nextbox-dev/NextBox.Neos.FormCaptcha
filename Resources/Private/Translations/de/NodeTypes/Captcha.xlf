@@ -11,6 +11,11 @@
                 <source>In the picture is the Captcha which must be entered.</source>
                 <target xml:lang="de">In dem Bild befindet sich das Captcha welches eingegeben werden muss.</target>
             </trans-unit>
+
+            <trans-unit id="formElement.error" xml:space="preserve" approved="yes">
+                <source>The captcha you entered is incorrect.</source>
+                <target xml:lang="de">Das eingegebene Captcha ist nicht korrekt.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

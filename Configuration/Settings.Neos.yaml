@@ -22,6 +22,9 @@ Neos:
               'Neos.Form:FormElement': true
             renderingOptions:
               templatePathPattern: 'resource://NextBox.Neos.FormCaptcha/Private/Templates/Form/FormElements/Captcha.html'
+              translationPackage: 'NextBox.Neos.FormCaptcha'
+              translationSource: 'NodeTypes/Captcha'
+              translationId: 'formElement.error'
             properties:
               elementImageClassAttributes: 'captcha-form-element d-block mb-3'
               elementInputClassAttributes: 'form-control'

@@ -9,6 +9,10 @@
             <trans-unit id="image.alt" xml:space="preserve" approved="yes">
                 <source>In the picture is the Captcha which must be entered.</source>
             </trans-unit>
+
+            <trans-unit id="formElement.error" xml:space="preserve" approved="yes">
+                <source>The captcha you entered is incorrect.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
