@@ -15,15 +15,33 @@ Just run the following command within your Distribution:
 composer require nextbox/neos-formcaptcha
 ```
 
-## Usage
+## Usage with [Neos.Form.Builder](https://github.com/neos/form-builder)
 
-__Required the suggested package neos/form-builder.__
+Add a captcha form element to your form.
 
 ![NodeType in Neos-Form-Builder](/Documentation/form-builder.png)
 
-Add the captcha form field to your form definition:
+## Usage with [Neos.Form](https://github.com/neos/form)
 
-## Settings
+Add the new form element to your form definition renderables:
+
+```yaml
+type: 'Neos.Form:Form'
+identifier: 'someIdentifier'
+renderables:
+  -
+    type: 'Neos.Form:Page'
+    identifier: page-one
+    renderables:
+      -
+        type: 'NextBox.Neos.FormCaptcha:Captcha'
+        identifier: 'captcha'
+finishers:
+  -
+    <Your finishers here>
+```
+
+## Global settings for Neos.Form and Neos.Form.Builder
 
 You can customize the display of the captcha elements by adjusting the settings in Settings.yaml.
 
@@ -61,3 +79,9 @@ NextBox:
         g: 255
         b: 255
 ```
+
+## i18n
+
+Currently, the following languages are supported: English, German, Danish, Spanish, Finnish, French, Latvian, Dutch and norwegian Bokmal.
+
+Feel free to send us labels in other languages so we can add them to the plugin.

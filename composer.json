@@ -2,10 +2,14 @@
     "name": "nextbox/neos-formcaptcha",
     "type": "neos-plugin",
     "description": "Neos-Plugin that adds a Captcha to the Neos Form Builder",
+    "license": "MIT",
     "require": {
         "neos/neos": "*",
         "neos/form-builder": "*",
         "gregwar/captcha": "~1.1.9"
+    },
+    "suggest": {
+        "neos/form-builder": "Integrates the Neos Form Builder into Neos CMS."
     },
     "autoload": {
         "psr-4": {
