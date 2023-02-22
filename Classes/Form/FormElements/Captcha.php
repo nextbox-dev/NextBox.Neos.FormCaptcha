@@ -2,7 +2,6 @@
 
 namespace NextBox\Neos\FormCaptcha\Form\FormElements;
 
-use NextBox\Neos\FormCaptcha\Controller\CaptchaController;
 use GuzzleHttp\Psr7\ServerRequest;
 use Neos\Error\Messages\Error;
 use Neos\Flow\Annotations as Flow;
@@ -11,6 +10,7 @@ use Neos\Flow\Mvc\Routing\UriBuilder;
 use Neos\Flow\Session\SessionInterface;
 use Neos\Form\Core\Model\AbstractFormElement;
 use Neos\Form\Core\Runtime\FormRuntime;
+use NextBox\Neos\FormCaptcha\Controller\CaptchaController;
 
 class Captcha extends AbstractFormElement
 {

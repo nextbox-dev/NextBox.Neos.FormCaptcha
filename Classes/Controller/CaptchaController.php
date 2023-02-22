@@ -9,7 +9,7 @@ use Neos\Utility\Files;
 
 class CaptchaController extends ActionController
 {
-    const CAPTCHA_SESSION_NAME = 'form_captcha.captcha_code';
+    public const CAPTCHA_SESSION_NAME = 'form_captcha.captcha_code';
 
     /**
      * @Flow\Inject
