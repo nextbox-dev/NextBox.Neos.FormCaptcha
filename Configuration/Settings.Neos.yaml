@@ -1,0 +1,31 @@
+Neos:
+  Flow:
+    mvc:
+      routes:
+        'NextBox.Neos.FormCaptcha': true
+  Neos:
+    fusion:
+      autoInclude:
+        'NextBox.Neos.FormCaptcha': true
+    userInterface:
+      translation:
+        autoInclude:
+          'NextBox.Neos.FormCaptcha':
+            - 'NodeTypes/*'
+  Form:
+    presets:
+      'default':
+        formElementTypes:
+          'NextBox.Neos.FormCaptcha:Captcha':
+            implementationClassName: NextBox\Neos\FormCaptcha\Form\FormElements\Captcha
+            superTypes:
+              'Neos.Form:FormElement': true
+            renderingOptions:
+              templatePathPattern: 'resource://NextBox.Neos.FormCaptcha/Private/Templates/Form/FormElements/Captcha.html'
+            properties:
+              elementImageClassAttributes: 'captcha-form-element d-block mb-3'
+              elementInputClassAttributes: 'form-control'
+              additionalAttributes: null
+              elementErrorClassAttribute: 'is-invalid'
+            validators:
+              - identifier: 'Neos.Flow:NotEmpty'

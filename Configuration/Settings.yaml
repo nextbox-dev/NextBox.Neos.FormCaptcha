@@ -1,0 +1,32 @@
+NextBox:
+  Neos:
+    FormCaptcha:
+      # allowed characters for the captcha elements
+      possibleLetters: 'bcdfghjkmnpqrstvwxyz23456789'
+      image:
+        # captcha image width
+        width: 130
+        # captcha image height
+        height: 50
+      # number of characters displayed in the captcha image
+      totalCharacters: 6
+      random:
+        # number of points displayed in the captcha image
+        dots: 50
+        # number of lines displayed in captcha image
+        lines: 25
+      # font color of the text
+      textColor:
+        r: 20
+        g: 40
+        b: 100
+      # color of noise
+      noiseColor:
+        r: 20
+        g: 40
+        b: 100
+      # background color of the Captcha image
+      backgroundColor:
+        r: 255
+        g: 255
+        b: 255

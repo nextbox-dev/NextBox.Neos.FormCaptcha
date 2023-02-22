@@ -1,0 +1,15 @@
+{
+    "name": "nextbox/neos-formcaptcha",
+    "type": "neos-plugin",
+    "description": "Neos-Plugin that adds a Captcha to the Neos Form Builder",
+    "require": {
+        "neos/neos": "*",
+        "neos/form-builder": "*",
+        "gregwar/captcha": "~1.1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "NextBox\\Neos\\FormCaptcha\\": "Classes"
+        }
+    }
+}

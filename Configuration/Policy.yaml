@@ -1,0 +1,11 @@
+privilegeTargets:
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'NextBox.Neos.FormCaptcha:Captcha':
+      matcher: 'method(NextBox\Neos\FormCaptcha\Controller\CaptchaController->(?!initialize).*Action())'
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'NextBox.Neos.FormCaptcha:Captcha'
+        permission: GRANT

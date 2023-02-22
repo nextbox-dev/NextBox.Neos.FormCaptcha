@@ -1,0 +1,8 @@
+-
+  name: 'Captcha'
+  uriPattern: 'captcha/create'
+  defaults:
+    '@package': 'NextBox.Neos.FormCaptcha'
+    '@controller': 'Captcha'
+    '@action': 'createCaptcha'
+    '@format': 'html'

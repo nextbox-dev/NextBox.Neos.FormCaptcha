@@ -1,0 +1,13 @@
+'NextBox.Neos.FormCaptcha:Captcha':
+  superTypes:
+    'Neos.Form.Builder:FormElement': true
+    'Neos.Form.Builder:DefaultValueMixin': false
+    'Neos.Form.Builder:IdentifierMixin': false
+    'Neos.Form.Builder:RequiredCheckboxMixin': false
+  ui:
+    label: i18n
+    icon: fas fa-user-shield
+    position: 60
+  properties:
+    label:
+      defaultValue: 'Captcha'
