@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="" product-name="NextBox.Neos.FormCaptcha" source-language="en" datatype="plaintext" target-language="da">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve" approved="yes">
+                <source>Captcha (Spam-Detection)</source>
+                <target xml:lang="da">Captcha (spammeddetektering)</target>
+            </trans-unit>
+
+            <trans-unit id="image.alt" xml:space="preserve" approved="yes">
+                <source>In the picture is the Captcha which must be entered.</source>
+                <target xml:lang="da">På billedet er der en captcha, som skal indtastes.</target>
+            </trans-unit>
+
+            <trans-unit id="formElement.error" xml:space="preserve" approved="yes">
+                <source>The captcha you entered is incorrect.</source>
+                <target xml:lang="da">Den captcha, du har indtastet, er ikke korrekt.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
