@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/nextbox-dev/NextBox.Neos.FormCaptcha/compare/0.2.0...0.3.0) (2023-02-22)
+
+
+### Features
+
+* add license and extend readme ([343aeb5](https://github.com/nextbox-dev/NextBox.Neos.FormCaptcha/commit/343aeb5692da9abf58afb2b2bc5a4c2ff0a9c7aa))
+
 ## [0.2.0](https://github.com/nextbox-dev/NextBox.Neos.FormCaptcha/compare/0.1.0...0.2.0) (2023-02-22)
 
 
